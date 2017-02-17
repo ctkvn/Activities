@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title>Checkout</title>
+	</head>
+	<body bgcolor="#99FF66" text="#003300">
+		<h2>Checkout</h2>
+		
+		<form name="form" action="javascript:void(0);">
+			<input type="text" value="0" name="txtQ" size="7">Quantity <br /><br />
+			<input type="text" name="txtP" size="7">Price <br /><br />
+			<input type="text" name="txtT" size="7">Total Cost <br /><br />
+			<input type="button" value="Calculate My Total" name="btnSubmit" onClick="calcVB()">
+		</form>
+		
+		<script language="javascript">
+			function calcVB(){
+				var quantity, price, cost;
+				quantity = document.form.txtQ.value;
+				price = document.form.txtP.value;
+				
+				cost = parseInt(quantity) * parseInt(price);
+				document.form.txtT.value=cost;
+				
+				alert("Your Total Cart is "+cost);
+			}
+		</script>
+	</body>
+</html>
